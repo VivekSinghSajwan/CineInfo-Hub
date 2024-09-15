@@ -1,0 +1,158 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "SUSE", sans-serif;    
+    font-weight: 400;
+    font-style: normal;
+}
+body{
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-height: 100vh; /* Make sure the body fills the full viewport height */
+}
+.navbar{
+    background-color: #232f3e;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.logo{
+    color: white;
+}
+.search-container input, button{
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+.search-container input{
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.search-container button{
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    cursor: pointer;
+    background-color: #f5c518;
+    transition: all 0.1s;
+}
+.search-container button:hover{
+    background-color: #ffdd45;
+}
+.footer{
+    bottom: 0;
+}
+
+/*Now styling the main tag*/
+
+main{
+    flex-grow: 1; /* This makes the main content grow to fill space */
+    margin: 0 auto;
+    margin: 35px 70px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.movie-container{
+    display: flex;
+    justify-content: center;
+    
+}
+.bg{
+    background: #fff;
+    box-shadow: 0 0 10px #ccc;    
+    border-radius: 5px;
+}
+.movie-poster img{
+    height: 450px;
+    margin-right: 25px;
+    border-radius: 5px 0 0 5px;
+}
+
+.movie-info{
+    padding-inline: 15px;
+}
+
+.movie-info h2{
+    text-align: center;
+    font-size: 32px;
+    margin: 20px 0 12px 0;
+}
+
+.movie-info h2+p{
+    text-align: center;
+}
+
+.movie-genre{
+    display: flex;
+    justify-content: center;
+    margin-block: 8px;
+    overflow-x: auto;
+}
+.movie-info .movie-genre span{
+    background: #232f3e;
+    color: #fff;
+    padding: 5px 14px;
+    margin-inline: 5px;
+    border: 2px solid black;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+.movie-info p{
+    font-size: 18px;
+    margin-bottom: 16px;
+    line-height: 24px;
+}
+/*Now styling the footer tag*/
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #232f3e;
+    color: #fff;
+    padding-block: 6px;
+    font-size: 16px;
+    bottom: 0;
+    width: 100%;
+}
+footer i{
+    margin-inline: 3px;
+    cursor: pointer;
+}
+
+/*Responsive Code*/
+@media screen and (max-width:950px)
+{
+    .movie-container{
+        flex-direction: column;
+    }
+    .movie-poster img{
+        width: 100%;
+        height: fit-content;
+        margin-right: 0;
+    }
+    .movie-info{
+        padding-inline: 30px;
+    }
+}
+
+@media screen and (max-width:620px)
+{
+    .navbar{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .search-container{
+        margin-top: 12px;
+    }
+}
